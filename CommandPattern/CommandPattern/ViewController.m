@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "Receiver.h"
+#import "ConcreteCommand.h"
+#import "Invoker.h"
 
 @interface ViewController ()
 
@@ -16,8 +19,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // 原理案例
+    [self commandPatternTheoryTest];
 }
 
+#pragma mark - 命令模式-原理案例
+-(void)commandPatternTheoryTest{
+    
+    //  创建接受者
+    Receiver *receiver = [[Receiver alloc]init];
+    
+    // 创建命令对象
+    ConcreteCommand *concreteCom = [[ConcreteCommand alloc]initWithRecevicer:receiver];
+    
+    // 创建请求者
+    Invoker *invoker = [[Invoker alloc]initConcreteCommand:concreteCom];
+    
+    // 执行命令
+    [invoker concreteCommand];
+}
 
 @end

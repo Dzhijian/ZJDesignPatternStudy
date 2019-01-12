@@ -15,6 +15,9 @@
 		049DFB8D21E66CFC00C2546E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFB8C21E66CFC00C2546E /* main.m */; };
 		049DFB9721E66CFC00C2546E /* CommandPatternTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFB9621E66CFC00C2546E /* CommandPatternTests.m */; };
 		049DFBA221E66CFC00C2546E /* CommandPatternUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBA121E66CFC00C2546E /* CommandPatternUITests.m */; };
+		049DFBB321E9CA7100C2546E /* Receiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBB221E9CA7100C2546E /* Receiver.m */; };
+		049DFBBA21E9CCE400C2546E /* ConcreteCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBB921E9CCE400C2546E /* ConcreteCommand.m */; };
+		049DFBBD21E9CE1700C2546E /* Invoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBBC21E9CE1700C2546E /* Invoker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,13 @@
 		049DFB9D21E66CFC00C2546E /* CommandPatternUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommandPatternUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		049DFBA121E66CFC00C2546E /* CommandPatternUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandPatternUITests.m; sourceTree = "<group>"; };
 		049DFBA321E66CFC00C2546E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049DFBB121E9CA7100C2546E /* Receiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Receiver.h; sourceTree = "<group>"; };
+		049DFBB221E9CA7100C2546E /* Receiver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Receiver.m; sourceTree = "<group>"; };
+		049DFBB721E9CBCF00C2546E /* CommandProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandProtocol.h; sourceTree = "<group>"; };
+		049DFBB821E9CCE400C2546E /* ConcreteCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConcreteCommand.h; sourceTree = "<group>"; };
+		049DFBB921E9CCE400C2546E /* ConcreteCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcreteCommand.m; sourceTree = "<group>"; };
+		049DFBBB21E9CE1700C2546E /* Invoker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Invoker.h; sourceTree = "<group>"; };
+		049DFBBC21E9CE1700C2546E /* Invoker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Invoker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 		049DFB7C21E66CFB00C2546E /* CommandPattern */ = {
 			isa = PBXGroup;
 			children = (
+				049DFBB021E9C9B700C2546E /* Command(命令模式原理案例) */,
 				049DFB7D21E66CFB00C2546E /* AppDelegate.h */,
 				049DFB7E21E66CFB00C2546E /* AppDelegate.m */,
 				049DFB8021E66CFB00C2546E /* ViewController.h */,
@@ -130,6 +141,20 @@
 				049DFBA321E66CFC00C2546E /* Info.plist */,
 			);
 			path = CommandPatternUITests;
+			sourceTree = "<group>";
+		};
+		049DFBB021E9C9B700C2546E /* Command(命令模式原理案例) */ = {
+			isa = PBXGroup;
+			children = (
+				049DFBB721E9CBCF00C2546E /* CommandProtocol.h */,
+				049DFBB121E9CA7100C2546E /* Receiver.h */,
+				049DFBB221E9CA7100C2546E /* Receiver.m */,
+				049DFBB821E9CCE400C2546E /* ConcreteCommand.h */,
+				049DFBB921E9CCE400C2546E /* ConcreteCommand.m */,
+				049DFBBB21E9CE1700C2546E /* Invoker.h */,
+				049DFBBC21E9CE1700C2546E /* Invoker.m */,
+			);
+			path = "Command(命令模式原理案例)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049DFBBD21E9CE1700C2546E /* Invoker.m in Sources */,
 				049DFB8221E66CFB00C2546E /* ViewController.m in Sources */,
 				049DFB8D21E66CFC00C2546E /* main.m in Sources */,
+				049DFBB321E9CA7100C2546E /* Receiver.m in Sources */,
+				049DFBBA21E9CCE400C2546E /* ConcreteCommand.m in Sources */,
 				049DFB7F21E66CFB00C2546E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
