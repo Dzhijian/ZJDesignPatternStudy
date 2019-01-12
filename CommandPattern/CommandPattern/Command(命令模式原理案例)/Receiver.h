@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
  * 接收者 -> Receiver
  */
 @interface Receiver : NSObject
-// 定义一个run 方法
+
+// 定义一个 run 方法
 -(void)run;
 
 @end

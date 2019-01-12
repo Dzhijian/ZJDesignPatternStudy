@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 所有命令都是由客户端来决定
 -(instancetype)initConcreteCommand:(ConcreteCommand *)concreteCommand;
-
+// 方法实现
 -(void)concreteCommand;
 
 @end

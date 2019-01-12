@@ -28,5 +28,4 @@
     [self.receiver run];
 }
 
-
 @end

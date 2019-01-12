@@ -9,15 +9,11 @@
 #import "Invoker.h"
 
 @interface Invoker ()
-
 /**
  * 父类引用指向子类实例对象(面向对象编程)
  */
 @property (nonatomic, strong) id<CommandProtocol>  concreteCom;
-
-
 @end
-
 
 /**
  * 请求者/执行者
@@ -37,5 +33,4 @@
     // 调用命令
     [self.concreteCom execute] ;
 }
-
 @end

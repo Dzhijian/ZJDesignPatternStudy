@@ -27,16 +27,16 @@
 #pragma mark - 命令模式-原理案例
 -(void)commandPatternTheoryTest{
     
-    //  创建接受者
+    // 1. 创建接受者
     Receiver *receiver = [[Receiver alloc]init];
     
-    // 创建命令对象
+    // 2. 创建命令对象
     ConcreteCommand *concreteCom = [[ConcreteCommand alloc]initWithRecevicer:receiver];
     
-    // 创建请求者
+    // 3. 创建请求者
     Invoker *invoker = [[Invoker alloc]initConcreteCommand:concreteCom];
     
-    // 执行命令
+    // 4. 执行命令
     [invoker concreteCommand];
 }
 
