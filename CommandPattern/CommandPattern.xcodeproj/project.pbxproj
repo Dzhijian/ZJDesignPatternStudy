@@ -18,6 +18,11 @@
 		049DFBB321E9CA7100C2546E /* Receiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBB221E9CA7100C2546E /* Receiver.m */; };
 		049DFBBA21E9CCE400C2546E /* ConcreteCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBB921E9CCE400C2546E /* ConcreteCommand.m */; };
 		049DFBBD21E9CE1700C2546E /* Invoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBBC21E9CE1700C2546E /* Invoker.m */; };
+		049DFBC121EA2F4100C2546E /* TetrisMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBC021EA2F4100C2546E /* TetrisMachine.m */; };
+		049DFBC521EB9A4F00C2546E /* TetrisMachineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBC421EB9A4F00C2546E /* TetrisMachineManager.m */; };
+		049DFBC821EB9A6900C2546E /* TMToLeftCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBC721EB9A6900C2546E /* TMToLeftCommand.m */; };
+		049DFBCB21EB9A7500C2546E /* TMToRightCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBCA21EB9A7500C2546E /* TMToRightCommand.m */; };
+		049DFBCE21EB9A8600C2546E /* TMToTransformCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBCD21EB9A8600C2546E /* TMToTransformCommand.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,17 @@
 		049DFBB921E9CCE400C2546E /* ConcreteCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcreteCommand.m; sourceTree = "<group>"; };
 		049DFBBB21E9CE1700C2546E /* Invoker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Invoker.h; sourceTree = "<group>"; };
 		049DFBBC21E9CE1700C2546E /* Invoker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Invoker.m; sourceTree = "<group>"; };
+		049DFBBF21EA2F4100C2546E /* TetrisMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TetrisMachine.h; sourceTree = "<group>"; };
+		049DFBC021EA2F4100C2546E /* TetrisMachine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TetrisMachine.m; sourceTree = "<group>"; };
+		049DFBC221EB9A0400C2546E /* TMCommandProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMCommandProtocol.h; sourceTree = "<group>"; };
+		049DFBC321EB9A4F00C2546E /* TetrisMachineManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TetrisMachineManager.h; sourceTree = "<group>"; };
+		049DFBC421EB9A4F00C2546E /* TetrisMachineManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TetrisMachineManager.m; sourceTree = "<group>"; };
+		049DFBC621EB9A6900C2546E /* TMToLeftCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMToLeftCommand.h; sourceTree = "<group>"; };
+		049DFBC721EB9A6900C2546E /* TMToLeftCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMToLeftCommand.m; sourceTree = "<group>"; };
+		049DFBC921EB9A7500C2546E /* TMToRightCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMToRightCommand.h; sourceTree = "<group>"; };
+		049DFBCA21EB9A7500C2546E /* TMToRightCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMToRightCommand.m; sourceTree = "<group>"; };
+		049DFBCC21EB9A8600C2546E /* TMToTransformCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMToTransformCommand.h; sourceTree = "<group>"; };
+		049DFBCD21EB9A8600C2546E /* TMToTransformCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMToTransformCommand.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +127,7 @@
 		049DFB7C21E66CFB00C2546E /* CommandPattern */ = {
 			isa = PBXGroup;
 			children = (
+				049DFBBE21EA2E8C00C2546E /* TetrisMachine(俄罗斯方块案例) */,
 				049DFBB021E9C9B700C2546E /* Command(命令模式原理案例) */,
 				049DFB7D21E66CFB00C2546E /* AppDelegate.h */,
 				049DFB7E21E66CFB00C2546E /* AppDelegate.m */,
@@ -155,6 +172,24 @@
 				049DFBBC21E9CE1700C2546E /* Invoker.m */,
 			);
 			path = "Command(命令模式原理案例)";
+			sourceTree = "<group>";
+		};
+		049DFBBE21EA2E8C00C2546E /* TetrisMachine(俄罗斯方块案例) */ = {
+			isa = PBXGroup;
+			children = (
+				049DFBBF21EA2F4100C2546E /* TetrisMachine.h */,
+				049DFBC021EA2F4100C2546E /* TetrisMachine.m */,
+				049DFBC221EB9A0400C2546E /* TMCommandProtocol.h */,
+				049DFBC321EB9A4F00C2546E /* TetrisMachineManager.h */,
+				049DFBC421EB9A4F00C2546E /* TetrisMachineManager.m */,
+				049DFBC621EB9A6900C2546E /* TMToLeftCommand.h */,
+				049DFBC721EB9A6900C2546E /* TMToLeftCommand.m */,
+				049DFBC921EB9A7500C2546E /* TMToRightCommand.h */,
+				049DFBCA21EB9A7500C2546E /* TMToRightCommand.m */,
+				049DFBCC21EB9A8600C2546E /* TMToTransformCommand.h */,
+				049DFBCD21EB9A8600C2546E /* TMToTransformCommand.m */,
+			);
+			path = "TetrisMachine(俄罗斯方块案例)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,8 +323,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				049DFBBD21E9CE1700C2546E /* Invoker.m in Sources */,
+				049DFBC121EA2F4100C2546E /* TetrisMachine.m in Sources */,
+				049DFBCE21EB9A8600C2546E /* TMToTransformCommand.m in Sources */,
 				049DFB8221E66CFB00C2546E /* ViewController.m in Sources */,
 				049DFB8D21E66CFC00C2546E /* main.m in Sources */,
+				049DFBC821EB9A6900C2546E /* TMToLeftCommand.m in Sources */,
+				049DFBC521EB9A4F00C2546E /* TetrisMachineManager.m in Sources */,
+				049DFBCB21EB9A7500C2546E /* TMToRightCommand.m in Sources */,
 				049DFBB321E9CA7100C2546E /* Receiver.m in Sources */,
 				049DFBBA21E9CCE400C2546E /* ConcreteCommand.m in Sources */,
 				049DFB7F21E66CFB00C2546E /* AppDelegate.m in Sources */,
