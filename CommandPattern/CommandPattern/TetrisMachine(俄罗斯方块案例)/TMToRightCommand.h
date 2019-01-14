@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface TMToRightCommand : NSObject<TMCommandProtocol>
 
--(instancetype)initWithTetriMachine:(TetrisMachine *)tm;
+-(instancetype)initWithTetrisMachine:(TetrisMachine *)tm;
 
 @end
 

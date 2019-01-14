@@ -15,7 +15,7 @@
 
 @implementation TMToRightCommand
 
--(instancetype)initWithTetriMachine:(TetrisMachine *)tm{
+-(instancetype)initWithTetrisMachine:(TetrisMachine *)tm{
     if (self = [super init]) {
         self.tm = tm;
     }

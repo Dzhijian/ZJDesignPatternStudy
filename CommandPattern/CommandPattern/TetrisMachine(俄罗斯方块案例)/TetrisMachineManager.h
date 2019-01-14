@@ -18,13 +18,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface TetrisMachineManager : NSObject
 
--(instancetype)initWithToLeftCommand:(TMToLeftCommand *)leftCommand
+-(instancetype)initWithTetrisMachine:(TetrisMachine *)tm
+                         leftCommand:(TMToLeftCommand *)leftCommand
                         rightCommand:(TMToRightCommand *)rightCommand
                     transformCommand:(TMToTransformCommand *)transformCommand;
-
+// 向左命令
 -(void)toLeftCommand;
+// 向右命令
 -(void)toRightCommand;
+// 变形命令
 -(void)toTransformCommand;
+
+// 撤销操作
+-(void)undoOpreation;
+// 撤销所有操作
+-(void)undoAllOpreation;
 
 
 @end

@@ -38,18 +38,25 @@
     
     // 创建命令对象
     TMToLeftCommand *left = [[TMToLeftCommand alloc]initWithTetrisMachine:tm];
-    TMToRightCommand *right = [[TMToRightCommand alloc]initWithTetriMachine:tm];
+    TMToRightCommand *right = [[TMToRightCommand alloc]initWithTetrisMachine:tm];
     TMToTransformCommand *transform = [[TMToTransformCommand alloc]initWithTetrisMachine:tm];
     
     // 创建请求者对象
-    TetrisMachineManager *tmManager = [[TetrisMachineManager alloc]initWithToLeftCommand:left
+    TetrisMachineManager *tmManager = [[TetrisMachineManager alloc]initWithTetrisMachine:tm
+                                                                             leftCommand:left
                                                                             rightCommand:right
                                                                         transformCommand:transform];
+    // 向左命令
     [tmManager toLeftCommand];
+    // 向右命令
     [tmManager toRightCommand];
+    // 变形命令
     [tmManager toTransformCommand];
     
-    
+    // 撤销操作
+    [tmManager undoOpreation];
+    // 撤销所有操作
+    [tmManager undoAllOpreation];
 }
 
 #pragma mark - 命令模式 - 原理案例
