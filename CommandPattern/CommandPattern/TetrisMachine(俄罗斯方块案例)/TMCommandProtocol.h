@@ -14,7 +14,6 @@
  */
 @protocol TMCommandProtocol<NSObject>
 
-
 /**
  * 具体命令
  */

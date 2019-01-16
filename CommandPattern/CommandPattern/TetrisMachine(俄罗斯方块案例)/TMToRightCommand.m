@@ -22,8 +22,6 @@
     return self;
 }
 
-
-
 // 执行具体命令
 - (void)execute{
     [self.tm toRight];
