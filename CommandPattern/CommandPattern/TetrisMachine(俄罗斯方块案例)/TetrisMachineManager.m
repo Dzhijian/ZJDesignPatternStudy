@@ -34,16 +34,19 @@
 // 调用命令
 -(void)toLeftCommand {
     [self.leftCommand execute];
+    // 保存向左命令操作到数组中
     [self.commands addObject:[[TMToLeftCommand alloc] initWithTetrisMachine:self.tm]];
 }
 
 -(void)toRightCommand {
     [self.rightCommand execute];
+    // 保存向右命令操作到数组中
     [self.commands addObject:[[TMToRightCommand alloc] initWithTetrisMachine:self.tm]];
 }
 
 -(void)toTransformCommand {
     [self.transformCommand execute];
+    // 保存变形命令操作到数组中
     [self.commands addObject:[[TMToTransformCommand alloc] initWithTetrisMachine:self.tm]];
 }
 
@@ -53,11 +56,10 @@
     if (self.commands.count > 0 ) {
         // 撤销操作
         [[self.commands lastObject] execute];
-        // 移除保存在数组的操作
+        // 移除保存在数组中的最后一个操作
         [self.commands removeLastObject];
     }
 }
-
 
 // 撤销所有操作
 -(void)undoAllOpreation{

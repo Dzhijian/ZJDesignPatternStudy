@@ -177,9 +177,9 @@
 		049DFBBE21EA2E8C00C2546E /* TetrisMachine(俄罗斯方块案例) */ = {
 			isa = PBXGroup;
 			children = (
+				049DFBC221EB9A0400C2546E /* TMCommandProtocol.h */,
 				049DFBBF21EA2F4100C2546E /* TetrisMachine.h */,
 				049DFBC021EA2F4100C2546E /* TetrisMachine.m */,
-				049DFBC221EB9A0400C2546E /* TMCommandProtocol.h */,
 				049DFBC321EB9A4F00C2546E /* TetrisMachineManager.h */,
 				049DFBC421EB9A4F00C2546E /* TetrisMachineManager.m */,
 				049DFBC621EB9A6900C2546E /* TMToLeftCommand.h */,

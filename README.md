@@ -25,5 +25,8 @@ WeChat: 18819206239
 [设计模式详解学习](https://dzhijian.github.io/2019/01/09/designpattern01.html)
 
 1. 命令模式：
-    * [计模式-命令模式原理分析（一）](https://dzhijian.github.io/2019/01/10/designpatterncommand01.html)    
+    * [计模式-命令模式原理分析（一）](https://dzhijian.github.io/2019/01/10/designpatterncommand01.html) 
+       
+    * [设计模式-命令模式具体案例分析（二）](https://dzhijian.github.io/2019/01/10/designpatterncommand02.html) 
+
 
