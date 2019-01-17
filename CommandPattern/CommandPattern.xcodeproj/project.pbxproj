@@ -23,6 +23,8 @@
 		049DFBC821EB9A6900C2546E /* TMToLeftCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBC721EB9A6900C2546E /* TMToLeftCommand.m */; };
 		049DFBCB21EB9A7500C2546E /* TMToRightCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBCA21EB9A7500C2546E /* TMToRightCommand.m */; };
 		049DFBCE21EB9A8600C2546E /* TMToTransformCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFBCD21EB9A8600C2546E /* TMToTransformCommand.m */; };
+		04A8276F21F0D25600999EA7 /* DynamicCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8276E21F0D25600999EA7 /* DynamicCommand.m */; };
+		04A8277221F0EA8C00999EA7 /* DynamicCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8277121F0EA8C00999EA7 /* DynamicCommandManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,10 @@
 		049DFBCA21EB9A7500C2546E /* TMToRightCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMToRightCommand.m; sourceTree = "<group>"; };
 		049DFBCC21EB9A8600C2546E /* TMToTransformCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMToTransformCommand.h; sourceTree = "<group>"; };
 		049DFBCD21EB9A8600C2546E /* TMToTransformCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMToTransformCommand.m; sourceTree = "<group>"; };
+		04A8276D21F0D25600999EA7 /* DynamicCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicCommand.h; sourceTree = "<group>"; };
+		04A8276E21F0D25600999EA7 /* DynamicCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCommand.m; sourceTree = "<group>"; };
+		04A8277021F0EA8C00999EA7 /* DynamicCommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicCommandManager.h; sourceTree = "<group>"; };
+		04A8277121F0EA8C00999EA7 /* DynamicCommandManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCommandManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 		049DFB7C21E66CFB00C2546E /* CommandPattern */ = {
 			isa = PBXGroup;
 			children = (
+				04A8276B21F0D21400999EA7 /* Dynamic(动态命令) */,
 				049DFBBE21EA2E8C00C2546E /* TetrisMachine(俄罗斯方块案例) */,
 				049DFBB021E9C9B700C2546E /* Command(命令模式原理案例) */,
 				049DFB7D21E66CFB00C2546E /* AppDelegate.h */,
@@ -190,6 +197,17 @@
 				049DFBCD21EB9A8600C2546E /* TMToTransformCommand.m */,
 			);
 			path = "TetrisMachine(俄罗斯方块案例)";
+			sourceTree = "<group>";
+		};
+		04A8276B21F0D21400999EA7 /* Dynamic(动态命令) */ = {
+			isa = PBXGroup;
+			children = (
+				04A8276D21F0D25600999EA7 /* DynamicCommand.h */,
+				04A8276E21F0D25600999EA7 /* DynamicCommand.m */,
+				04A8277021F0EA8C00999EA7 /* DynamicCommandManager.h */,
+				04A8277121F0EA8C00999EA7 /* DynamicCommandManager.m */,
+			);
+			path = "Dynamic(动态命令)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +343,7 @@
 				049DFBBD21E9CE1700C2546E /* Invoker.m in Sources */,
 				049DFBC121EA2F4100C2546E /* TetrisMachine.m in Sources */,
 				049DFBCE21EB9A8600C2546E /* TMToTransformCommand.m in Sources */,
+				04A8276F21F0D25600999EA7 /* DynamicCommand.m in Sources */,
 				049DFB8221E66CFB00C2546E /* ViewController.m in Sources */,
 				049DFB8D21E66CFC00C2546E /* main.m in Sources */,
 				049DFBC821EB9A6900C2546E /* TMToLeftCommand.m in Sources */,
@@ -332,6 +351,7 @@
 				049DFBCB21EB9A7500C2546E /* TMToRightCommand.m in Sources */,
 				049DFBB321E9CA7100C2546E /* Receiver.m in Sources */,
 				049DFBBA21E9CCE400C2546E /* ConcreteCommand.m in Sources */,
+				04A8277221F0EA8C00999EA7 /* DynamicCommandManager.m in Sources */,
 				049DFB7F21E66CFB00C2546E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
