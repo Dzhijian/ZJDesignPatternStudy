@@ -13,6 +13,8 @@
 
 #import "TetrisMachine.h"
 #import "TetrisMachineManager.h"
+#import "DynamicCommandManager.h"
+
 @interface ViewController ()
 
 @end
@@ -27,6 +29,26 @@
     
     // 俄罗斯方块具体案例
     [self commandPatternTMTest];
+    // 动态命令案例
+    [self commandPatternDynomicTest];
+}
+
+#pragma mark - 动态命令案例
+-(void)commandPatternDynomicTest{
+    NSLog(@"\n\n********************** 命令模式 - 动态命令案例 *************************\n");
+    // 创建接收者
+    TetrisMachine *tm = [[TetrisMachine alloc]init];
+    // 创建动态命令管理者
+    DynamicCommandManager *manager = [[DynamicCommandManager alloc]initWithTetrisMachine:tm];
+    
+    // 动态添加执行命令
+    [manager toLeftCommand];
+    [manager toRightCommand];
+    [manager toTransformCommand];
+    
+    // 执行撤销命令
+    [manager undoOpreation];
+    [manager undoAllOpreation];
 }
 
 
@@ -61,7 +83,7 @@
 
 #pragma mark - 命令模式 - 原理案例
 -(void)commandPatternTheoryTest{
-     NSLog(@"\n\n********************** 命令模式 - 原理案例 *************************\n");
+    NSLog(@"\n\n********************** 命令模式 - 原理案例 *************************\n");
     // 1. 创建接受者
     Receiver *receiver = [[Receiver alloc]init];
     

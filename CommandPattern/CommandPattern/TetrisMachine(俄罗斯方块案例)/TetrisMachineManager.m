@@ -13,7 +13,7 @@
 @property (nonatomic, strong) TMToRightCommand *rightCommand;
 @property (nonatomic, strong) TMToTransformCommand *transformCommand;
 
-// 保存所有操作
+// 保存所有命令操作
 @property (nonatomic, strong) NSMutableArray *commands;
 
 @end
