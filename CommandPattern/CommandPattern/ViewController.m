@@ -14,7 +14,7 @@
 #import "TetrisMachine.h"
 #import "TetrisMachineManager.h"
 #import "DynamicCommandManager.h"
-
+#import "GenericsCommandManager.h"
 @interface ViewController ()
 
 @end
@@ -29,9 +29,32 @@
     
     // 俄罗斯方块具体案例
     [self commandPatternTMTest];
+    
     // 动态命令案例
     [self commandPatternDynomicTest];
+    
+    // 泛型命令案例
+    [self commandPatternGenericsTest];
 }
+
+#pragma mark - 动态命令案例
+-(void)commandPatternGenericsTest{
+    NSLog(@"\n\n********************** 命令模式 - 泛型命令案例 *************************\n");
+    // 创建接收者
+    TetrisMachine *tm = [[TetrisMachine alloc]init];
+    // 创建动态命令管理者
+    GenericsCommandManager *manager = [[GenericsCommandManager alloc]initWithTetrisMachine:tm];
+    
+    // 动态添加执行命令
+    [manager toLeftCommand];
+    [manager toRightCommand];
+    [manager toTransformCommand];
+    
+    // 执行撤销命令
+    [manager undoOpreation];
+    [manager undoAllOpreation];
+}
+
 
 #pragma mark - 动态命令案例
 -(void)commandPatternDynomicTest{
