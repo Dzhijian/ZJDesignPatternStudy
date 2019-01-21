@@ -15,6 +15,9 @@
 #import "TetrisMachineManager.h"
 #import "DynamicCommandManager.h"
 #import "GenericsCommandManager.h"
+#import "CompoundCommandManager.h"
+
+
 @interface ViewController ()
 
 @end
@@ -33,6 +36,9 @@
     // 动态命令案例
     [self commandPatternDynomicTest];
     
+    // 动态命令-复合命令
+    [self commandPatternCompoundTest];
+    
     // 泛型命令案例
     [self commandPatternGenericsTest];
 }
@@ -50,6 +56,24 @@
     [manager toRightCommand];
     [manager toTransformCommand];
     
+    // 执行撤销命令
+    [manager undoOpreation];
+    [manager undoAllOpreation];
+}
+
+#pragma mark - 动态命令-复合命令
+-(void)commandPatternCompoundTest{
+    NSLog(@"\n\n********************** 命令模式 - 复合命令 *************************\n");
+    // 创建接收者
+    TetrisMachine *tm = [[TetrisMachine alloc]init];
+    // 创建动态命令管理者
+    CompoundCommandManager *manager = [[CompoundCommandManager alloc]initWithTetrisMachine:tm];
+    
+    // 动态添加执行命令
+    [manager toLeftCommand];
+    [manager toRightCommand];
+    [manager toTransformCommand];
+
     // 执行撤销命令
     [manager undoOpreation];
     [manager undoAllOpreation];

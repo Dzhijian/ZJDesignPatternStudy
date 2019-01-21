@@ -27,6 +27,8 @@
 		04A8277221F0EA8C00999EA7 /* DynamicCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8277121F0EA8C00999EA7 /* DynamicCommandManager.m */; };
 		04A8277621F4DF9F00999EA7 /* GenericsCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8277521F4DF9F00999EA7 /* GenericsCommand.m */; };
 		04A8277921F4E1F600999EA7 /* GenericsCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8277821F4E1F600999EA7 /* GenericsCommandManager.m */; };
+		04A8277D21F62A6200999EA7 /* CompoundCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8277C21F62A6200999EA7 /* CompoundCommand.m */; };
+		04A8278021F62B6400999EA7 /* CompoundCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8277F21F62B6400999EA7 /* CompoundCommandManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,10 @@
 		04A8277521F4DF9F00999EA7 /* GenericsCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericsCommand.m; sourceTree = "<group>"; };
 		04A8277721F4E1F600999EA7 /* GenericsCommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericsCommandManager.h; sourceTree = "<group>"; };
 		04A8277821F4E1F600999EA7 /* GenericsCommandManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenericsCommandManager.m; sourceTree = "<group>"; };
+		04A8277B21F62A6200999EA7 /* CompoundCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompoundCommand.h; sourceTree = "<group>"; };
+		04A8277C21F62A6200999EA7 /* CompoundCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompoundCommand.m; sourceTree = "<group>"; };
+		04A8277E21F62B6400999EA7 /* CompoundCommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompoundCommandManager.h; sourceTree = "<group>"; };
+		04A8277F21F62B6400999EA7 /* CompoundCommandManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompoundCommandManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 		049DFB7C21E66CFB00C2546E /* CommandPattern */ = {
 			isa = PBXGroup;
 			children = (
+				04A8277A21F62A3200999EA7 /* Compound(复合命令) */,
 				04A8277321F4DF8400999EA7 /* Generics(泛型命令) */,
 				04A8276B21F0D21400999EA7 /* Dynamic(动态命令) */,
 				049DFBBE21EA2E8C00C2546E /* TetrisMachine(俄罗斯方块案例) */,
@@ -226,6 +233,17 @@
 				04A8277821F4E1F600999EA7 /* GenericsCommandManager.m */,
 			);
 			path = "Generics(泛型命令)";
+			sourceTree = "<group>";
+		};
+		04A8277A21F62A3200999EA7 /* Compound(复合命令) */ = {
+			isa = PBXGroup;
+			children = (
+				04A8277B21F62A6200999EA7 /* CompoundCommand.h */,
+				04A8277C21F62A6200999EA7 /* CompoundCommand.m */,
+				04A8277E21F62B6400999EA7 /* CompoundCommandManager.h */,
+				04A8277F21F62B6400999EA7 /* CompoundCommandManager.m */,
+			);
+			path = "Compound(复合命令)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,8 +376,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A8277D21F62A6200999EA7 /* CompoundCommand.m in Sources */,
 				049DFBBD21E9CE1700C2546E /* Invoker.m in Sources */,
 				049DFBC121EA2F4100C2546E /* TetrisMachine.m in Sources */,
+				04A8278021F62B6400999EA7 /* CompoundCommandManager.m in Sources */,
 				049DFBCE21EB9A8600C2546E /* TMToTransformCommand.m in Sources */,
 				04A8276F21F0D25600999EA7 /* DynamicCommand.m in Sources */,
 				04A8277921F4E1F600999EA7 /* GenericsCommandManager.m in Sources */,
