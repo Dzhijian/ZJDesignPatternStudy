@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// 动态命令管理器
+// 请求者:动态命令管理器
 @interface DynamicCommandManager : NSObject
 
 -(instancetype)initWithTetrisMachine:(TetrisMachine *)tm;
