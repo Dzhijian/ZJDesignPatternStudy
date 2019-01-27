@@ -1,28 +1,32 @@
+
 //
-//  CompoundCommandManager.m
+//  QueueCommandManager.m
 //  CommandPattern
 //
-//  Created by 邓志坚 on 2019/1/22.
+//  Created by 邓志坚 on 2019/1/28.
 //  Copyright © 2019 邓志坚. All rights reserved.
 //
 
-#import "CompoundCommandManager.h"
+#import "QueueCommandManager.h"
 #import "DynamicCommand.h"
 #import "CompoundCommand.h"
-@interface CompoundCommandManager ()
+
+@interface QueueCommandManager ()
 
 @property(nonatomic, strong) NSMutableArray* commands;
 @property(nonatomic, strong) TetrisMachine* tm;
+@property (nonatomic, strong) dispatch_queue_t queue;
 
 @end
-
-@implementation CompoundCommandManager
+@implementation QueueCommandManager
 
 - (instancetype)initWithTetrisMachine:(TetrisMachine*)tm{
     self = [super init];
     if (self) {
         self.tm = tm;
         self.commands = [[NSMutableArray alloc] init];
+        
+        self.queue = dispatch_queue_create("queueCommand", NULL);
     }
     return self;
 }
@@ -44,22 +48,23 @@
 }
 
 -(void)addCommand:(NSString*)methodName{
-    //根据方法名称，动态加载执行对象的方法(runtime基础知识)
-    //自己复习一下关于runtime基础知识
-    //获取到方法对象
-    SEL method = NSSelectorFromString(methodName);
-    //添加动态命令
-    [self.commands addObject:[DynamicCommand createCommand:self.tm block:^(TetrisMachine *tm) {
-        //执行回调
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [tm performSelector:method];
-#pragma clang diagnostic pop
-    }]];
+    
+    // 考虑线程安全
+    // 多线程处理 异步
+    dispatch_sync(self.queue, ^{
+        
+        // 根据方法名称,动态加载执行对象的方法
+        // 获取方法对象
+        SEL method = NSSelectorFromString(methodName);
+        // 添加命令
+        [self.commands addObject:[DynamicCommand createCommand:self.tm block:^(TetrisMachine * _Nonnull tm) {
+            [self.tm performSelector:method];
+        }]];
+    });
+    
 }
 
 -(void)undoOpreation{
-    //倒序(队列->自己设计)
     if (self.commands.count > 0) {
         NSLog(@"撤销如下：...");
         //撤销->DynamicCommand
@@ -71,7 +76,6 @@
 
 -(void)undoAllOpreation{
     NSLog(@"撤销所有");
-    //复合命令调用
     CompoundCommand* command = [[CompoundCommand alloc] initWithCommands:self.commands];
     [command execute];
     [self.commands removeAllObjects];

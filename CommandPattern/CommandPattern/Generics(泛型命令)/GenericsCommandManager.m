@@ -46,7 +46,6 @@
     // 根据方法名称,动态加载执行对象的方法
     // 获取方法对象
     SEL method = NSSelectorFromString(methodName);
-    
     // 添加命令
     [self.commands addObject:[GenericsCommand createCommand:self.tm block:^(TetrisMachine * _Nonnull tm) {
         [self.tm performSelector:method];

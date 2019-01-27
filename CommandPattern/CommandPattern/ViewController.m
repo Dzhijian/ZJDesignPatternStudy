@@ -16,7 +16,8 @@
 #import "DynamicCommandManager.h"
 #import "GenericsCommandManager.h"
 #import "CompoundCommandManager.h"
-
+#import "QueueCommandManager.h"
+#import "BlockCommandManager.h"
 
 @interface ViewController ()
 
@@ -28,19 +29,53 @@
     [super viewDidLoad];
     
     // 原理案例
-    [self commandPatternTheoryTest];
+//    [self commandPatternTheoryTest];
     
     // 俄罗斯方块具体案例
-    [self commandPatternTMTest];
+//    [self commandPatternTMTest];
     
     // 动态命令案例
-    [self commandPatternDynomicTest];
+//    [self commandPatternDynomicTest];
     
     // 动态命令-复合命令
-    [self commandPatternCompoundTest];
+//    [self commandPatternCompoundTest];
     
     // 泛型命令案例
-    [self commandPatternGenericsTest];
+//    [self commandPatternGenericsTest];
+    
+    // 多线程处理
+    [self commandPatternQueueCommandTest];
+    
+    // Block命令
+    [self commandPatternBlockCommandTest];
+}
+
+-(void)commandPatternBlockCommandTest{
+    NSLog(@"\n\n********************** 命令模式 - Block命令 *************************\n");
+    // 创建接收者
+    TetrisMachine *tm = [[TetrisMachine alloc]init];
+    BlockCommandManager *manager = [[BlockCommandManager alloc] initWithTetrisMachine:tm];
+    [manager toLeftCommand];
+    [manager toRightCommand];
+    [manager toTransformCommand];
+    
+    [manager undoOpreation];
+    [manager undoAllOpreation];
+}
+
+#pragma mark-
+-(void)commandPatternQueueCommandTest{
+    NSLog(@"\n\n********************** 命令模式 - 多线程处理 *************************\n");
+    // 创建接收者
+    TetrisMachine *tm = [[TetrisMachine alloc]init];
+    QueueCommandManager *manager = [[QueueCommandManager alloc]initWithTetrisMachine:tm];
+    [manager toLeftCommand];
+    [manager toRightCommand];
+    [manager toTransformCommand];
+    
+    [manager undoOpreation];
+    [manager undoAllOpreation];
+    
 }
 
 #pragma mark - 动态命令案例

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0437177221FE1B6B00693ABC /* BlockCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0437177121FE1B6B00693ABC /* BlockCommandManager.m */; };
+		0437177621FE1BF900693ABC /* QueueCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0437177521FE1BF900693ABC /* QueueCommandManager.m */; };
 		049DFB7F21E66CFB00C2546E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFB7E21E66CFB00C2546E /* AppDelegate.m */; };
 		049DFB8221E66CFB00C2546E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049DFB8121E66CFB00C2546E /* ViewController.m */; };
 		049DFB8521E66CFB00C2546E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049DFB8321E66CFB00C2546E /* Main.storyboard */; };
@@ -49,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0437177021FE1B6B00693ABC /* BlockCommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockCommandManager.h; sourceTree = "<group>"; };
+		0437177121FE1B6B00693ABC /* BlockCommandManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockCommandManager.m; sourceTree = "<group>"; };
+		0437177421FE1BF900693ABC /* QueueCommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueCommandManager.h; sourceTree = "<group>"; };
+		0437177521FE1BF900693ABC /* QueueCommandManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueueCommandManager.m; sourceTree = "<group>"; };
 		049DFB7A21E66CFB00C2546E /* CommandPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommandPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049DFB7D21E66CFB00C2546E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		049DFB7E21E66CFB00C2546E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +128,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0437176F21FE1B4200693ABC /* Block(闭包命令) */ = {
+			isa = PBXGroup;
+			children = (
+				0437177021FE1B6B00693ABC /* BlockCommandManager.h */,
+				0437177121FE1B6B00693ABC /* BlockCommandManager.m */,
+			);
+			path = "Block(闭包命令)";
+			sourceTree = "<group>";
+		};
+		0437177321FE1BAA00693ABC /* QueueCommand(多线程并发处理) */ = {
+			isa = PBXGroup;
+			children = (
+				0437177421FE1BF900693ABC /* QueueCommandManager.h */,
+				0437177521FE1BF900693ABC /* QueueCommandManager.m */,
+			);
+			path = "QueueCommand(多线程并发处理)";
+			sourceTree = "<group>";
+		};
 		049DFB7121E66CFB00C2546E = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +169,8 @@
 		049DFB7C21E66CFB00C2546E /* CommandPattern */ = {
 			isa = PBXGroup;
 			children = (
+				0437176F21FE1B4200693ABC /* Block(闭包命令) */,
+				0437177321FE1BAA00693ABC /* QueueCommand(多线程并发处理) */,
 				04A8277A21F62A3200999EA7 /* Compound(复合命令) */,
 				04A8277321F4DF8400999EA7 /* Generics(泛型命令) */,
 				04A8276B21F0D21400999EA7 /* Dynamic(动态命令) */,
@@ -378,6 +404,7 @@
 			files = (
 				04A8277D21F62A6200999EA7 /* CompoundCommand.m in Sources */,
 				049DFBBD21E9CE1700C2546E /* Invoker.m in Sources */,
+				0437177621FE1BF900693ABC /* QueueCommandManager.m in Sources */,
 				049DFBC121EA2F4100C2546E /* TetrisMachine.m in Sources */,
 				04A8278021F62B6400999EA7 /* CompoundCommandManager.m in Sources */,
 				049DFBCE21EB9A8600C2546E /* TMToTransformCommand.m in Sources */,
@@ -387,6 +414,7 @@
 				049DFB8D21E66CFC00C2546E /* main.m in Sources */,
 				049DFBC821EB9A6900C2546E /* TMToLeftCommand.m in Sources */,
 				049DFBC521EB9A4F00C2546E /* TetrisMachineManager.m in Sources */,
+				0437177221FE1B6B00693ABC /* BlockCommandManager.m in Sources */,
 				049DFBCB21EB9A7500C2546E /* TMToRightCommand.m in Sources */,
 				049DFBB321E9CA7100C2546E /* Receiver.m in Sources */,
 				049DFBBA21E9CCE400C2546E /* ConcreteCommand.m in Sources */,
